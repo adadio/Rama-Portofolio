@@ -10,52 +10,53 @@
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
     <link rel="stylesheet" href="css/style.css">
     <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindplus/elements@1" type="module"></script>
 </head>
 
     <!-- Navigasi Bar -->
     <nav class="relative bg-gray-900 after:pointer-events-none after:absolute after:inset-x-0 after:bottom-0 after:h-px after:bg-white/10">
-    <div class="mx-auto max-w-7xl px-2 sm:px-6 lg:px-8">
-        <div class="relative flex h-16 items-center justify-between">
-        <div class="absolute inset-y-0 left-0 flex items-center sm:hidden">
-            <!-- Mobile menu button-->
-            <button type="button" command="--toggle" commandfor="mobile-menu" class="relative inline-flex items-center justify-center rounded-md p-2 text-gray-400 hover:bg-white/5 hover:text-white focus:outline-2 focus:-outline-offset-1 focus:outline-indigo-500">
-            <span class="absolute -inset-0.5"></span>
-            <span class="sr-only">Open main menu</span>
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" data-slot="icon" aria-hidden="true" class="size-6 in-aria-expanded:hidden">
-                <path d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5" stroke-linecap="round" stroke-linejoin="round" />
-            </svg>
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" data-slot="icon" aria-hidden="true" class="size-6 not-in-aria-expanded:hidden">
-                <path d="M6 18 18 6M6 6l12 12" stroke-linecap="round" stroke-linejoin="round" />
-            </svg>
-            </button>
-        </div>
-        <div class="flex flex-1 items-center justify-center sm:items-stretch sm:justify-start">
-            <div class="flex shrink-0 items-center">
-            <img src="https://tailwindcss.com/plus-assets/img/logos/mark.svg?color=indigo&shade=500" alt="Your Company" class="h-8 w-auto" />
-            </div>
-            <div class="hidden sm:ml-6 sm:block">
-            <div class="flex space-x-4">
-                <!-- Current: "bg-gray-950/50 text-white", Default: "text-gray-300 hover:bg-white/5 hover:text-white" -->
-                <a href="index.html" class="rounded-md px-3 py-2 text-sm font-medium text-gray-300 hover:bg-white/5 hover:text-white">Home</a>
-                <a href="about.html" aria-current="page" class="rounded-md bg-gray-950/50 px-3 py-2 text-sm font-medium text-white">About</a>
-                <a href="projects.html" class="rounded-md px-3 py-2 text-sm font-medium text-gray-300 hover:bg-white/5 hover:text-white">Projects</a>
-            </div>
-            </div>
-        </div>
-        <div class="absolute inset-y-0 right-0 flex items-center pr-2 sm:static sm:inset-auto sm:ml-6 sm:pr-0">
+        <div class="mx-auto max-w-7xl px-2 sm:px-6 lg:px-8">
+            <div class="relative flex h-16 items-center justify-between">
+                <div class="absolute inset-y-0 left-0 flex items-center sm:hidden">
+                    <!-- Mobile menu button-->
+                    <button type="button" command="--toggle" commandfor="mobile-menu" class="relative inline-flex items-center justify-center rounded-md p-2 text-gray-400 hover:bg-white/5 hover:text-white focus:outline-2 focus:-outline-offset-1 focus:outline-indigo-500">
+                    <span class="absolute -inset-0.5"></span>
+                    <span class="sr-only">Open main menu</span>
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" data-slot="icon" aria-hidden="true" class="size-6 in-aria-expanded:hidden">
+                        <path d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5" stroke-linecap="round" stroke-linejoin="round" />
+                    </svg>
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" data-slot="icon" aria-hidden="true" class="size-6 not-in-aria-expanded:hidden">
+                        <path d="M6 18 18 6M6 6l12 12" stroke-linecap="round" stroke-linejoin="round" />
+                    </svg>
+                    </button>
+                </div>
 
-            <!-- Profile dropdown -->
-            <el-dropdown class="relative ml-3">
-            <button class="relative flex rounded-full focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-500">
-                <span class="absolute -inset-1.5"></span>
-                <span class="sr-only">Open user menu</span>
-                <img src="images\profile1-removebg-preview.png" alt="" class="size-8 rounded-full bg-gray-800 outline -outline-offset-1 outline-white/10" />
-            </button>
-            </el-dropdown>
-        </div>
-        </div>
-    </div>
+                <div class="flex flex-1 items-center justify-center sm:items-stretch sm:justify-start">
+                    <div class="flex shrink-0 items-center">
+                        <img src="https://tailwindcss.com/plus-assets/img/logos/mark.svg?color=indigo&shade=500" alt="Your Company" class="h-8 w-auto" />
+                    </div>
+                    <div class="hidden sm:ml-6 sm:block">
+                        <div class="flex space-x-4">
+                            <!-- Current: "bg-gray-950/50 text-white", Default: "text-gray-300 hover:bg-white/5 hover:text-white" -->
+                            <a href="index.html" class="rounded-md px-3 py-2 text-sm font-medium text-gray-300 hover:bg-white/5 hover:text-white">Home</a>
+                            <a href="about.html" aria-current="page" class="rounded-md bg-gray-950/50 px-3 py-2 text-sm font-medium text-white">About</a>
+                            <a href="projects.html" class="rounded-md px-3 py-2 text-sm font-medium text-gray-300 hover:bg-white/5 hover:text-white">Projects</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="absolute inset-y-0 right-0 flex items-center pr-2 sm:static sm:inset-auto sm:ml-6 sm:pr-0">
 
+                    <!-- Profile dropdown -->
+                    <el-dropdown class="relative ml-3">
+                    <button class="relative flex rounded-full focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-500">
+                        <span class="absolute -inset-1.5"></span>
+                        <span class="sr-only">Open user menu</span>
+                        <img src="images\profile1-removebg-preview.png" alt="" class="size-8 rounded-full bg-gray-800 outline -outline-offset-1 outline-white/10" />
+                    </button>
+                    </el-dropdown>
+                </div>
+            </div>
+        </div>
     <el-disclosure id="mobile-menu" hidden class="block sm:hidden">
         <div class="space-y-1 px-2 pt-2 pb-3">
         <!-- Current: "bg-gray-950/50 text-white", Default: "text-gray-300 hover:bg-white/5 hover:text-white" -->
@@ -88,13 +89,13 @@
 
                 <p class="text-lg leading-relaxed mb-6">
                 I’m passionate about learning new technologies, especially in web development and system integration.
-                My goal is to keep improving, keep building, and keep creating solutions that make everyday life a little better —
-                step by step, code by code 💛
+                My goal is to keep improving, keep building, and keep creating solutions that make everyday life a little better
+                step by step, code by code.
                 </p>
 
                 <p class="text-lg leading-relaxed">
                 When I’m not coding, you’ll probably find me editing videos, designing something colorful, or
-                just sipping coffee while planning my next small project idea ☕💻
+                just sipping coffee while planning my next small project idea.
                 </p>
             </div>
         </div>
@@ -105,7 +106,7 @@
         <div class="max-w-5xl mx-auto text-gray-800">
             <h2 class="text-4xl font-bold text-center mb-10 text-gray-900">Skills & Tools</h2>
             <p class="text-lg text-center mb-12">
-            Here are some of the technologies and tools I’ve learned and used throughout my projects ✨
+            Here are some of the technologies and tools I’ve learned and used throughout my projects.
             </p>
 
             <div class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-8 text-center">
@@ -124,7 +125,7 @@
             <!-- Tools -->
             <div class="p-6 bg-gray-50 rounded-2xl shadow hover:shadow-md transition-all">
                 <h3 class="font-semibold text-lg mb-3">Tools</h3>
-                <p class="text-gray-600">Git, GitHub, Replit, Visual Studio Code</p>
+                <p class="text-gray-600">Git, GitHub, Visual Studio Code</p>
             </div>
 
             <!-- CMS & Platforms -->
@@ -153,18 +154,18 @@
         <div class="max-w-4xl mx-auto px-6 text-center text-gray-800">
             <h2 class="text-4xl font-bold mb-6 text-gray-900">Beyond the Code 💛</h2>
             <p class="text-lg leading-relaxed mb-6">
-            Behind every line of code, there’s a bit of me — curiosity, patience, and the love for learning something new every day.
-            I believe that technology isn’t just about logic and structure, but also about creativity, emotion, and connection.
+            Behind every line of code, there’s a bit of me curiosity, patience, and the love for learning something new every day.
+            I believe that <strong>technology</strong> isn’t just about logic and structure, but also about creativity, emotion, and connection.
             </p>
 
             <p class="text-lg leading-relaxed mb-6">
-            When I’m not debugging or building something, you’ll probably find me sipping coffee ☕ while editing short videos, 
-            designing something colorful 🎨, or just listening to chill music while thinking about my next idea 💭.
+            When I’m not debugging or building something, you’ll probably find me sipping <strong>coffee</strong> while editing short videos, 
+            designing something colorful, or just listening to chill music while thinking about my next idea.
             </p>
 
             <p class="text-lg leading-relaxed mb-8">
-            I value kindness, growth, and collaboration — and I’m always open to new opportunities, new stories, and new friends 
-            who share the same spark of curiosity ✨
+            I value kindness, growth, and collaboration and I’m always open to new opportunities, new stories, and new friends 
+            who share the same spark of curiosity.
             </p>
         </div>
     </section>
@@ -173,18 +174,18 @@
 
     <!-- Footer -->
     <footer class="bg-black shadow-inner py-4 text-center text-sm text-gray-500">
-    <div class="container text-center">
-                <p class="mb-1">© Syaputra Rama Adadio | Junior Full Stack Developer</p>
+        <section class="container text-center pl-8">
+            <p class="mb-1">© Syaputra Rama Adadio | Junior Full Stack Developer</p>
                 <p class="mb-1">
                     <a href="mailto:radadio73@gmail.com" class="text-white text-decoration-none">
                         radadio73@gmail.com
                     </a>
-                </p>
-                <p>
-                    <a href="https://www.instagram.com/radadio/" target="_blank" class="text-white me-2">Instagram</a> |
-                    <a href="https://www.linkedin.com/in/syaputra-rama-adadio-767731234/" target="_blank" class="text-white ms-2">LinkedIn</a>
-                </p>
-            </div>
+                </p>    
+            <p>
+                <a href="https://www.instagram.com/radadio/" target="_blank" class="text-white me-2">Instagram</a> |
+                <a href="https://www.linkedin.com/in/syaputra-rama-adadio-767731234/" target="_blank" class="text-white ms-2">LinkedIn</a>
+            </p>
+        </section>
     </footer>
 
 </script>

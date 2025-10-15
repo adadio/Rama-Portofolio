@@ -61,7 +61,7 @@
     <div class="space-y-1 px-2 pt-2 pb-3">
       <!-- Current: "bg-gray-950/50 text-white", Default: "text-gray-300 hover:bg-white/5 hover:text-white" -->
       <a href="index.html" class="block rounded-md px-3 py-2 text-base font-medium text-gray-300 hover:bg-white/5 hover:text-white">Home</a>
-      <a href="about.html" class="block rounded-md px-3 py-2 text-base font-medium text-gray-300 hover:bg-white/5 hover:text-white">Team</a>
+      <a href="about.html" class="block rounded-md px-3 py-2 text-base font-medium text-gray-300 hover:bg-white/5 hover:text-white">About</a>
       <a href="projects.html" aria-current="page" class="block rounded-md bg-gray-950/50 px-3 py-2 text-base font-medium text-white">Projects</a>
     </div>
   </el-disclosure>
@@ -69,11 +69,22 @@
 
     <!-- Main Content -->
     <body>
-    <main class="max-w-6xl mx-auto px-4 py-12">
-    <h2 class="text-3xl font-bold mb-4 text-center text-blue-600">My Projects</h2>
+    
+    <!-- Header -->
+    <header class="text-center">
+      <h2 class="text-4xl font-extrabold pt-8 text-center 
+          bg-gradient-to-r from-blue-500 via-purple-500 to-pink-500 
+          bg-clip-text text-transparent drop-shadow-md
+          relative inline-block after:content-[''] after:block after:w-24 after:h-[3px] after:mx-auto after:mt-2 
+          after:bg-gradient-to-r after:from-blue-400 after:to-pink-400">
+        My Projects
+      </h2>
+    </header>
 
-    <!-- Card Container -->
-    <div class="grid gap-8 sm:grid-cols-2 lg:grid-cols-3">
+    <!-- MC -->
+    <main class="max-w-6xl mx-auto px-4 py-12">
+    <!-- Card Container Projects -->
+    <section class="grid gap-8 sm:grid-cols-2 lg:grid-cols-3">
       
       <!-- Card 1 -->
       <div class="bg-white rounded-2xl shadow-md overflow-hidden hover:shadow-lg transition">
@@ -119,26 +130,96 @@
           </a>
         </div>
       </div>
+
+      <!-- Card 4 -->
+      <div class="bg-white rounded-2xl shadow-md overflow-hidden hover:shadow-lg transition">
+        <img src="images/Project4.png" alt="Project 4" class="w-full h-40 object-cover">
+        <div class="p-5">
+          <h3 class="text-xl font-semibold mb-2">Presentation Ancol</h3>
+          <p class="text-gray-600 mb-4 text-sm">
+            Membuat advertising sederhana menggunakan Canva dengan tujuan menarik pengunjung agar tertarik mengunjungi Ancol Dufan.
+          </p>
+          <a href="https://www.canva.com/design/DAF9PL-X5BM/psrRPHqbtQqQ8wpOMTOjdA/edit?utm_content=DAF9PL-X5BM&utm_campaign=designshare&utm_medium=link2&utm_source=sharebutton" target="_blank" 
+             class="inline-block px-4 py-2 bg-blue-500 text-white rounded-lg hover:bg-blue-600">
+             View Project
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <header class="text-center">
+      <h2 class="text-4xl font-extrabold pt-10 text-center 
+        bg-gradient-to-r from-pink-500 via-purple-500 to-blue-500 
+        bg-clip-text text-transparent drop-shadow-md 
+        relative inline-block after:content-[''] after:block after:w-24 after:h-[3px] after:mx-auto after:mt-2 
+        after:bg-gradient-to-r after:from-pink-400 after:to-blue-400">
+        My Sketch Gallery
+      </h2>
+    </header>
+    <!-- Gallery Section -->
+    <section id="gallery" class="pt-8 pb-16 bg-gray-50">
+
+      <div class="max-w-6xl mx-auto grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6 px-4">
+        <!-- Card 1 -->
+        <div class="overflow-hidden rounded-2xl shadow-lg hover:shadow-2xl transition-shadow duration-300 cursor-pointer" onclick="openModal('images/sketch1.jpg')">
+          <img src="images/sketch1.jpg" alt="Sketch 1" class="w-full h-64 object-cover hover:scale-105 transition-transform duration-300">
+        </div>
+
+        <!-- Card 2 -->
+        <div class="overflow-hidden rounded-2xl shadow-lg hover:shadow-2xl transition-shadow duration-300 cursor-pointer" onclick="openModal('images/sketch2.jpg')">
+          <img src="images/sketch2.jpg" alt="Sketch 2" class="w-full h-64 object-cover hover:scale-105 transition-transform duration-300">
+        </div>
+
+        <!-- Card 3 -->
+        <div class="overflow-hidden rounded-2xl shadow-lg hover:shadow-2xl transition-shadow duration-300 cursor-pointer" onclick="openModal('images/sketch3.jpg')">
+          <img src="images/sketch3.jpg" alt="Sketch 3" class="w-full h-64 object-cover hover:scale-105 transition-transform duration-300">
+        </div>
+      </div>
+
+      <p class="text-center text-gray-500 mt-8 text-sm italic">
+        “Just some of my little sketches — simple, but full of thoughts”
+      </p>
+    </section>
+
+    <!-- Modal -->
+    <div id="imgModal" class="fixed inset-0 bg-black bg-opacity-70 hidden items-center justify-center z-50">
+      <div class="relative max-w-3xl mx-auto">
+        <button onclick="closeModal()" class="absolute top-2 right-2 bg-white text-gray-700 rounded-full px-2 py-1 text-sm hover:bg-gray-200">✕</button>
+        <img id="modalImage" src="" alt="Preview" class="rounded-lg max-h-[80vh] object-contain shadow-2xl">
+      </div>
     </div>
+
   </main>
 
   <!-- Footer -->
   <footer class="bg-black shadow-inner py-4 text-center text-sm text-gray-500">
-   <div class="container text-center">
-            <p class="mb-1">© Syaputra Rama Adadio | Junior Full Stack Developer</p>
-            <p class="mb-1">
-                <a href="mailto:radadio73@gmail.com" class="text-white text-decoration-none">
-                    radadio73@gmail.com
-                </a>
-            </p>
-            <p>
-                <a href="https://www.instagram.com/radadio/" target="_blank" class="text-white me-2">Instagram</a> |
-                <a href="https://www.linkedin.com/in/syaputra-rama-adadio-767731234/" target="_blank" class="text-white ms-2">LinkedIn</a>
-            </p>
-        </div>
-  </footer>
+    <section class="container text-center pl-8">
+      <p class="mb-1">© Syaputra Rama Adadio | Junior Full Stack Developer</p>
+          <p class="mb-1">
+              <a href="mailto:radadio73@gmail.com" class="text-white text-decoration-none">
+                radadio73@gmail.com
+              </a>          
+          </p>    
+          <p>
+              <a href="https://www.instagram.com/radadio/" target="_blank" class="text-white me-2">Instagram</a> |
+              <a href="https://www.linkedin.com/in/syaputra-rama-adadio-767731234/" target="_blank" class="text-white ms-2">LinkedIn</a>
+          </p>
+      </section>
+    </footer>
 
-</script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    <script>
+      function openModal(src) {
+      document.getElementById('modalImage').src = src;
+      document.getElementById('imgModal').classList.remove('hidden');
+      document.getElementById('imgModal').classList.add('flex');
+      }
+
+      function closeModal() {
+        document.getElementById('imgModal').classList.add('hidden');
+        document.getElementById('imgModal').classList.remove('flex');
+      }
+    </script>
+
 </body>
 </html>
