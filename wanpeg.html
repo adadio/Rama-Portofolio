@@ -1,0 +1,1495 @@
+<!DOCTYPE html>
+<html lang="en" class="dark scroll-smooth">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Rama Adadio — IT Support & Data Analytics Professional</title>
+  <meta name="description" content="Personal portfolio of Rama Adadio. Informatics Engineering Graduate specializing in IT Support, Excel Data Validation, and Data Analytics.">
+  
+  <!-- Tailwind CSS CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  
+  <!-- Lucide Icons -->
+  <script src="https://unpkg.com/lucide@latest"></script>
+  
+  <!-- Google Fonts: Inter & JetBrains Mono -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+
+  <script>
+    tailwind.config = {
+      darkMode: 'class',
+      theme: {
+        extend: {
+          fontFamily: {
+            sans: ['Inter', 'sans-serif'],
+            mono: ['JetBrains Mono', 'monospace'],
+          },
+          colors: {
+            dark: {
+              900: '#090b0e',
+              800: '#0d0f12',
+              700: '#14181f',
+              600: '#1e2430',
+              500: '#2d3545',
+            },
+            accent: {
+              blue: '#3b82f6',
+              violet: '#8b5cf6',
+              emerald: '#10b981',
+              amber: '#f59e0b',
+            }
+          },
+          animation: {
+            'pulse-slow': 'pulse 4s cubic-bezier(0.4, 0, 0.6, 1) infinite',
+          }
+        }
+      }
+    }
+  </script>
+
+  <style>
+    /* Custom Scrollbar */
+    ::-webkit-scrollbar {
+      width: 8px;
+      height: 8px;
+    }
+    ::-webkit-scrollbar-track {
+      background: #090b0e;
+    }
+    ::-webkit-scrollbar-thumb {
+      background: #1e2430;
+      border-radius: 4px;
+    }
+    ::-webkit-scrollbar-thumb:hover {
+      background: #2d3545;
+    }
+
+    /* Subtle Grid Overlay */
+    .bg-grid-pattern {
+      background-size: 32px 32px;
+      background-image: 
+        linear-gradient(to right, rgba(255, 255, 255, 0.03) 1px, transparent 1px),
+        linear-gradient(to bottom, rgba(255, 255, 255, 0.03) 1px, transparent 1px);
+    }
+
+    /* Glow Effects */
+    .glow-blue {
+      box-shadow: 0 0 25px -5px rgba(59, 130, 246, 0.15);
+    }
+    .glow-violet {
+      box-shadow: 0 0 25px -5px rgba(139, 92, 246, 0.15);
+    }
+
+    /* Glassmorphism */
+    .glass-card {
+      background: rgba(13, 15, 18, 0.7);
+      backdrop-filter: blur(12px);
+      -webkit-backdrop-filter: blur(12px);
+      border: 1px solid rgba(255, 255, 255, 0.08);
+    }
+    .glass-card-hover {
+      transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+    }
+    .glass-card-hover:hover {
+      border-color: rgba(59, 130, 246, 0.3);
+      transform: translateY(-2px);
+      box-shadow: 0 12px 30px -10px rgba(0, 0, 0, 0.5);
+    }
+  </style>
+</head>
+<body class="bg-dark-900 text-gray-100 font-sans antialiased selection:bg-accent-blue/30 selection:text-white min-h-screen flex flex-col relative overflow-x-hidden">
+
+  <!-- Background Grid Decor -->
+  <div class="fixed inset-0 bg-grid-pattern pointer-events-none z-0"></div>
+
+  <!-- Ambient Glow Spots -->
+  <div class="fixed top-0 left-1/4 w-[500px] h-[500px] bg-accent-blue/5 rounded-full blur-[120px] pointer-events-none z-0"></div>
+  <div class="fixed bottom-1/3 right-1/4 w-[500px] h-[500px] bg-accent-violet/5 rounded-full blur-[120px] pointer-events-none z-0"></div>
+
+  <!-- TOP HEADER / NAVIGATION -->
+  <header class="sticky top-0 z-50 glass-card border-b border-white/5 bg-dark-900/80 backdrop-blur-md">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="flex items-center justify-between h-16">
+        
+        <!-- Wordmark -->
+        <a href="#" class="flex items-center gap-2 font-mono text-sm tracking-wider font-semibold group">
+          <span class="w-2.5 h-2.5 rounded-full bg-accent-blue group-hover:scale-125 transition-transform"></span>
+          <span class="text-white group-hover:text-accent-blue transition-colors">RAMA ADADIO</span>
+          <span class="text-xs text-gray-500 font-normal hidden sm:inline-block">/ B.S. Eng</span>
+        </a>
+
+        <!-- Desktop Navigation Links -->
+        <nav class="hidden md:flex items-center gap-1 lg:gap-2 text-xs font-medium text-gray-400">
+          <a href="#about" class="px-3 py-2 rounded-md hover:text-white hover:bg-white/5 transition-all">About</a>
+          <a href="#snapshot" class="px-3 py-2 rounded-md hover:text-white hover:bg-white/5 transition-all">Snapshot</a>
+          <a href="#experience" class="px-3 py-2 rounded-md hover:text-white hover:bg-white/5 transition-all">Experience</a>
+          <a href="#projects" class="px-3 py-2 rounded-md hover:text-white hover:bg-white/5 transition-all">Projects</a>
+          <a href="#data-lab" class="px-3 py-2 rounded-md hover:text-accent-blue hover:bg-accent-blue/10 transition-all flex items-center gap-1.5 text-gray-300">
+            <i data-lucide="flask-conical" class="w-3.5 h-3.5 text-accent-blue"></i> Data Lab
+          </a>
+          <a href="#skills" class="px-3 py-2 rounded-md hover:text-white hover:bg-white/5 transition-all">Skills</a>
+          <a href="#contact" class="px-3 py-2 rounded-md hover:text-white hover:bg-white/5 transition-all">Contact</a>
+        </nav>
+
+        <!-- CTA & Actions -->
+        <div class="flex items-center gap-3">
+          <a href="#contact" onclick="triggerCVDownload(event)" class="inline-flex items-center gap-2 px-3.5 py-1.5 text-xs font-mono font-medium text-white bg-dark-700 hover:bg-dark-600 border border-white/10 rounded-lg transition-all hover:border-accent-blue/40 shadow-sm">
+            <i data-lucide="download" class="w-3.5 h-3.5 text-accent-blue"></i>
+            <span>CV</span>
+          </a>
+
+          <!-- Mobile Hamburger Toggle -->
+          <button id="mobile-menu-btn" class="md:hidden p-2 rounded-lg text-gray-400 hover:text-white hover:bg-white/5 focus:outline-none">
+            <i data-lucide="menu" class="w-5 h-5"></i>
+          </button>
+        </div>
+
+      </div>
+    </div>
+
+    <!-- Mobile Dropdown Menu -->
+    <div id="mobile-menu" class="hidden md:hidden border-b border-white/10 bg-dark-800 px-4 pt-2 pb-4 space-y-1 text-sm font-medium">
+      <a href="#about" class="block px-3 py-2 rounded-md text-gray-300 hover:bg-white/5">About</a>
+      <a href="#snapshot" class="block px-3 py-2 rounded-md text-gray-300 hover:bg-white/5">Snapshot</a>
+      <a href="#experience" class="block px-3 py-2 rounded-md text-gray-300 hover:bg-white/5">Experience</a>
+      <a href="#projects" class="block px-3 py-2 rounded-md text-gray-300 hover:bg-white/5">Projects</a>
+      <a href="#data-lab" class="block px-3 py-2 rounded-md text-accent-blue hover:bg-accent-blue/10">Data Analytics Lab</a>
+      <a href="#skills" class="block px-3 py-2 rounded-md text-gray-300 hover:bg-white/5">Skills</a>
+      <a href="#contact" class="block px-3 py-2 rounded-md text-gray-300 hover:bg-white/5">Contact</a>
+    </div>
+  </header>
+
+  <!-- MAIN CONTENT CONTAINER -->
+  <main class="flex-grow z-10">
+
+    <!-- HERO SECTION -->
+    <section id="about" class="pt-12 md:pt-20 pb-16 lg:pb-24 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="grid grid-cols-1 lg:grid-cols-12 gap-10 items-center">
+        
+        <!-- Left Column: Copy & CTAs -->
+        <div class="lg:col-span-7 space-y-6">
+          
+          <!-- Availability Pill -->
+          <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-accent-blue/10 border border-accent-blue/20 text-accent-blue text-xs font-mono">
+            <span class="w-2 h-2 rounded-full bg-accent-blue animate-pulse"></span>
+            <span>Open for IT Support & Data Roles</span>
+          </div>
+
+          <!-- Headline -->
+          <h1 class="text-3xl sm:text-4xl lg:text-5xl font-extrabold text-white tracking-tight leading-tight">
+            Turning Technical Complexity Into <span class="bg-gradient-to-r from-accent-blue via-indigo-400 to-accent-violet bg-clip-text text-transparent">Practical Solutions</span>.
+          </h1>
+
+          <!-- Body Paragraph -->
+          <p class="text-gray-300 text-base sm:text-lg leading-relaxed max-w-2xl">
+            I'm <strong class="text-white font-semibold">Rama Adadio</strong>, an Informatics Engineering graduate with hands-on experience in IT operations, Excel-based data validation, web technologies, and technical problem-solving. I'm building on this foundation to pursue opportunities in data analytics and information-driven decision-making.
+          </p>
+
+          <!-- Core Personal Branding Quote -->
+          <div class="p-4 rounded-xl bg-dark-800/80 border-l-2 border-accent-blue text-xs sm:text-sm text-gray-400 font-mono">
+            "I combine technical problem-solving, data validation, and practical IT experience to make information and technology more useful, reliable, and accessible."
+          </div>
+
+          <!-- CTAs -->
+          <div class="flex flex-wrap items-center gap-4 pt-2">
+            <a href="#projects" class="px-6 py-3 rounded-lg text-sm font-semibold text-white bg-accent-blue hover:bg-blue-600 transition-all duration-200 shadow-lg shadow-accent-blue/25 flex items-center gap-2">
+              <span>Explore My Work</span>
+              <i data-lucide="arrow-down-right" class="w-4 h-4"></i>
+            </a>
+            <a href="#data-lab" class="px-6 py-3 rounded-lg text-sm font-semibold text-gray-300 hover:text-white bg-dark-700 hover:bg-dark-600 border border-white/10 transition-all duration-200 flex items-center gap-2">
+              <i data-lucide="bar-chart-2" class="w-4 h-4 text-accent-violet"></i>
+              <span>Data Lab Demo</span>
+            </a>
+          </div>
+
+          <!-- Metadata Badges Bar -->
+          <div class="pt-6 grid grid-cols-2 sm:grid-cols-4 gap-3 text-xs font-mono">
+            <div class="p-3 rounded-lg bg-dark-800/60 border border-white/5">
+              <div class="text-gray-500">Degree</div>
+              <div class="text-gray-200 font-medium mt-0.5">S.Kom (Informatics)</div>
+              <div class="text-[10px] text-accent-emerald mt-0.5">GPA: 3.50 / 4.00</div>
+            </div>
+            <div class="p-3 rounded-lg bg-dark-800/60 border border-white/5">
+              <div class="text-gray-500">IT Experience</div>
+              <div class="text-gray-200 font-medium mt-0.5">PT Khong Guan</div>
+              <div class="text-[10px] text-gray-400 mt-0.5">IT Operations Intern</div>
+            </div>
+            <div class="p-3 rounded-lg bg-dark-800/60 border border-white/5">
+              <div class="text-gray-500">Data Experience</div>
+              <div class="text-gray-200 font-medium mt-0.5">KAI / Pentagraphi</div>
+              <div class="text-[10px] text-gray-400 mt-0.5">RAB Data Validation</div>
+            </div>
+            <div class="p-3 rounded-lg bg-dark-800/60 border border-white/5">
+              <div class="text-gray-500">Institution</div>
+              <div class="text-gray-200 font-medium mt-0.5 truncate" title="Institut Bisnis Muhammadiyah Bekasi">IBM Bekasi</div>
+              <div class="text-[10px] text-gray-400 mt-0.5">Informatics Dept</div>
+            </div>
+          </div>
+
+        </div>
+
+        <!-- Right Column: Interactive Diagnostic Terminal Widget -->
+        <div class="lg:col-span-5">
+          <div class="glass-card rounded-2xl p-5 border border-white/10 shadow-2xl relative overflow-hidden font-mono text-xs">
+            
+            <!-- Window Bar -->
+            <div class="flex items-center justify-between pb-4 border-b border-white/10">
+              <div class="flex items-center gap-2">
+                <span class="w-3 h-3 rounded-full bg-red-500/80 inline-block"></span>
+                <span class="w-3 h-3 rounded-full bg-yellow-500/80 inline-block"></span>
+                <span class="w-3 h-3 rounded-full bg-green-500/80 inline-block"></span>
+                <span class="text-gray-400 text-[11px] ml-2">rama-adadio-sysdiag.sh</span>
+              </div>
+              <span class="text-[10px] text-accent-blue bg-accent-blue/10 px-2 py-0.5 rounded border border-accent-blue/20">v2.4.0-STABLE</span>
+            </div>
+
+            <!-- Terminal Output Lines -->
+            <div class="py-4 space-y-2.5 text-gray-300">
+              <div class="flex items-start gap-2">
+                <span class="text-accent-blue">$</span>
+                <span>sys_info --profile "Rama Adadio"</span>
+              </div>
+              
+              <div class="pl-4 space-y-1 text-gray-400 border-l border-white/10 my-2">
+                <div><span class="text-gray-500">EDUCATION :</span> Inst. Bisnis Muhammadiyah Bekasi</div>
+                <div><span class="text-gray-500">MAJOR     :</span> Informatics Engineering (Teknik Informatika)</div>
+                <div><span class="text-gray-500">GPA       :</span> <span class="text-accent-emerald font-semibold">3.50 / 4.00</span></div>
+                <div><span class="text-gray-500">LOCATION  :</span> Bekasi / Jakarta, Indonesia</div>
+              </div>
+
+              <div class="flex items-start gap-2 pt-1">
+                <span class="text-accent-blue">$</span>
+                <span>check_core_competencies</span>
+              </div>
+
+              <!-- Live Status Meter Indicators -->
+              <div class="grid grid-cols-1 gap-2 pt-1">
+                <div>
+                  <div class="flex justify-between text-[11px] mb-1">
+                    <span class="text-gray-400">Excel & Data Validation</span>
+                    <span class="text-accent-blue font-bold">VERIFIED</span>
+                  </div>
+                  <div class="w-full bg-dark-700 h-1.5 rounded-full overflow-hidden">
+                    <div class="bg-accent-blue h-full w-[92%] rounded-full"></div>
+                  </div>
+                </div>
+
+                <div>
+                  <div class="flex justify-between text-[11px] mb-1">
+                    <span class="text-gray-400">IT Infrastructure & Support</span>
+                    <span class="text-accent-violet font-bold">VERIFIED</span>
+                  </div>
+                  <div class="w-full bg-dark-700 h-1.5 rounded-full overflow-hidden">
+                    <div class="bg-accent-violet h-full w-[88%] rounded-full"></div>
+                  </div>
+                </div>
+
+                <div>
+                  <div class="flex justify-between text-[11px] mb-1">
+                    <span class="text-gray-400">Web Development (JS/PHP)</span>
+                    <span class="text-accent-emerald font-bold">ACTIVE</span>
+                  </div>
+                  <div class="w-full bg-dark-700 h-1.5 rounded-full overflow-hidden">
+                    <div class="bg-accent-emerald h-full w-[80%] rounded-full"></div>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Output Status Box -->
+              <div class="mt-4 p-3 rounded bg-dark-900/90 border border-white/5 text-[11px] flex items-center justify-between">
+                <div class="flex items-center gap-2">
+                  <i data-lucide="check-circle-2" class="w-4 h-4 text-accent-emerald"></i>
+                  <span class="text-gray-300">Ready for Technical & Analytical Deployment</span>
+                </div>
+                <span class="text-gray-500 text-[10px]">PING 12ms</span>
+              </div>
+            </div>
+
+            <!-- Terminal Footer controls -->
+            <div class="pt-3 border-t border-white/10 flex items-center justify-between text-[10px] text-gray-500">
+              <span class="flex items-center gap-1">
+                <span class="w-1.5 h-1.5 rounded-full bg-accent-emerald"></span> System Diagnostics Normal
+              </span>
+              <span>UTF-8 | UNIX</span>
+            </div>
+
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- SECTION: PROFESSIONAL SNAPSHOT (4 DIMENSIONS) -->
+    <section id="snapshot" class="py-16 bg-dark-800/40 border-y border-white/5">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        
+        <div class="mb-12 text-center max-w-2xl mx-auto">
+          <h2 class="text-xs font-mono font-semibold tracking-wider text-accent-blue uppercase">Core Capabilities</h2>
+          <p class="text-2xl sm:text-3xl font-bold text-white mt-1">Four Pillars of Technical Expertise</p>
+          <p class="text-gray-400 text-sm mt-2">A versatile engineering profile bridging operations, data processing, development, and technical communication.</p>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+          
+          <!-- Pillar 1: IT Operations -->
+          <div class="glass-card glass-card-hover p-6 rounded-2xl flex flex-col justify-between">
+            <div>
+              <div class="w-10 h-10 rounded-xl bg-accent-blue/10 border border-accent-blue/20 flex items-center justify-center text-accent-blue mb-5">
+                <i data-lucide="wrench" class="w-5 h-5"></i>
+              </div>
+              <h3 class="text-lg font-bold text-white mb-2">IT Operations</h3>
+              <p class="text-gray-400 text-xs leading-relaxed">
+                Hardware troubleshooting, printer setup, network connectivity, and office productivity tool administration (OneDrive, Excel) across corporate environment setups.
+              </p>
+            </div>
+            <div class="mt-6 pt-4 border-t border-white/5 flex items-center justify-between text-xs font-mono text-gray-400">
+              <span>PT Khong Guan</span>
+              <a href="#experience" class="text-accent-blue hover:underline flex items-center gap-1">Details <i data-lucide="chevron-right" class="w-3 h-3"></i></a>
+            </div>
+          </div>
+
+          <!-- Pillar 2: Data Processing -->
+          <div class="glass-card glass-card-hover p-6 rounded-2xl flex flex-col justify-between">
+            <div>
+              <div class="w-10 h-10 rounded-xl bg-accent-violet/10 border border-accent-violet/20 flex items-center justify-center text-accent-violet mb-5">
+                <i data-lucide="file-spreadsheet" class="w-5 h-5"></i>
+              </div>
+              <h3 class="text-lg font-bold text-white mb-2">Data Processing</h3>
+              <p class="text-gray-400 text-xs leading-relaxed">
+                Excel-based RAB document validation, audit reconciliation, structured catalog consistency checks, and multi-file project record checks across railway infrastructure files.
+              </p>
+            </div>
+            <div class="mt-6 pt-4 border-t border-white/5 flex items-center justify-between text-xs font-mono text-gray-400">
+              <span>KAI / Pentagraphi</span>
+              <a href="#experience" class="text-accent-blue hover:underline flex items-center gap-1">Details <i data-lucide="chevron-right" class="w-3 h-3"></i></a>
+            </div>
+          </div>
+
+          <!-- Pillar 3: Web Development -->
+          <div class="glass-card glass-card-hover p-6 rounded-2xl flex flex-col justify-between">
+            <div>
+              <div class="w-10 h-10 rounded-xl bg-accent-emerald/10 border border-accent-emerald/20 flex items-center justify-center text-accent-emerald mb-5">
+                <i data-lucide="code" class="w-5 h-5"></i>
+              </div>
+              <h3 class="text-lg font-bold text-white mb-2">Web Development</h3>
+              <p class="text-gray-400 text-xs leading-relaxed">
+                Responsive frontend layouts, CMS management (WordPress), modern JavaScript, PHP, CSS frameworks (Tailwind/Bootstrap), and responsive UI engineering.
+              </p>
+            </div>
+            <div class="mt-6 pt-4 border-t border-white/5 flex items-center justify-between text-xs font-mono text-gray-400">
+              <span>Web & CMS Projects</span>
+              <a href="#projects" class="text-accent-blue hover:underline flex items-center gap-1">Details <i data-lucide="chevron-right" class="w-3 h-3"></i></a>
+            </div>
+          </div>
+
+          <!-- Pillar 4: Technical Communication -->
+          <div class="glass-card glass-card-hover p-6 rounded-2xl flex flex-col justify-between">
+            <div>
+              <div class="w-10 h-10 rounded-xl bg-accent-amber/10 border border-accent-amber/20 flex items-center justify-center text-accent-amber mb-5">
+                <i data-lucide="graduation-cap" class="w-5 h-5"></i>
+              </div>
+              <h3 class="text-lg font-bold text-white mb-2">Tech Communication</h3>
+              <p class="text-gray-400 text-xs leading-relaxed">
+                Explaining technical concepts, adaptive learning strategies, tutoring students across mathematics & academic subjects, and clear user documentation.
+              </p>
+            </div>
+            <div class="mt-6 pt-4 border-t border-white/5 flex items-center justify-between text-xs font-mono text-gray-400">
+              <span>CettaCita Education</span>
+              <a href="#experience" class="text-accent-blue hover:underline flex items-center gap-1">Details <i data-lucide="chevron-right" class="w-3 h-3"></i></a>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- SECTION: PROFESSIONAL EXPERIENCE TIMELINE -->
+    <section id="experience" class="py-20 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      
+      <div class="max-w-3xl mb-12">
+        <h2 class="text-xs font-mono font-semibold tracking-wider text-accent-blue uppercase">Verified Track Record</h2>
+        <p class="text-2xl sm:text-3xl font-bold text-white mt-1">Professional Experience</p>
+        <p class="text-gray-400 text-sm mt-2">Chronological history of practical roles, technical internships, and operational projects.</p>
+      </div>
+
+      <!-- Timeline Container -->
+      <div class="relative border-l border-white/10 ml-4 sm:ml-8 space-y-12">
+
+        <!-- Experience 1: KAI / Pentagraphi -->
+        <div class="relative pl-8 sm:pl-10 group">
+          <!-- Timeline Marker -->
+          <div class="absolute -left-[17px] top-1.5 w-8 h-8 rounded-full bg-dark-800 border border-accent-violet flex items-center justify-center text-accent-violet group-hover:scale-110 transition-transform">
+            <i data-lucide="file-check-2" class="w-4 h-4"></i>
+          </div>
+
+          <div class="glass-card p-6 sm:p-8 rounded-2xl">
+            <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-2 mb-4">
+              <div>
+                <span class="text-xs font-mono text-accent-violet bg-accent-violet/10 px-2.5 py-1 rounded border border-accent-violet/20 inline-block mb-1">
+                  DATA VALIDATION & QUALITY ASSURANCE
+                </span>
+                <h3 class="text-xl font-bold text-white">Assistant Consultant — Railway Data Validation</h3>
+                <p class="text-gray-400 text-sm font-medium">PT Kereta Api Indonesia (Persero) / Pentagraphi</p>
+              </div>
+              <div class="text-xs font-mono text-gray-400 bg-dark-700/80 px-3 py-1.5 rounded-lg border border-white/5 self-start sm:self-auto">
+                Nov 2024 – Jan 2025
+              </div>
+            </div>
+
+            <p class="text-gray-300 text-sm leading-relaxed mb-4">
+              Key operational data support role focused on verifying accuracy, structural consistency, and budget documentation (RAB 2024) across major railway infrastructure categories.
+            </p>
+
+            <ul class="space-y-2 text-xs sm:text-sm text-gray-400 mb-6 list-disc list-inside">
+              <li>Validated budget estimates and expenditure records across railway infrastructure domains including overhead catenary lines, signaling, telecommunications, track & bridges, and operations.</li>
+              <li>Handled structured data checks and formula verifications across a project repository containing approx. 100 GB of aggregate project documentation over 2 months.</li>
+              <li>Identified formatting discrepancies, misaligned cost codes, and formula inconsistencies to ensure clean final deliverables.</li>
+            </ul>
+
+            <div class="flex flex-wrap gap-2 pt-2 border-t border-white/5">
+              <span class="text-[11px] font-mono px-2.5 py-1 rounded bg-dark-700 text-gray-300">MS Excel Advanced</span>
+              <span class="text-[11px] font-mono px-2.5 py-1 rounded bg-dark-700 text-gray-300">RAB Cost Validation</span>
+              <span class="text-[11px] font-mono px-2.5 py-1 rounded bg-dark-700 text-gray-300">Data Consistency Checking</span>
+              <span class="text-[11px] font-mono px-2.5 py-1 rounded bg-dark-700 text-gray-300">Railway Infrastructure Data</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Experience 2: PT Khong Guan -->
+        <div class="relative pl-8 sm:pl-10 group">
+          <div class="absolute -left-[17px] top-1.5 w-8 h-8 rounded-full bg-dark-800 border border-accent-blue flex items-center justify-center text-accent-blue group-hover:scale-110 transition-transform">
+            <i data-lucide="wrench" class="w-4 h-4"></i>
+          </div>
+
+          <div class="glass-card p-6 sm:p-8 rounded-2xl">
+            <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-2 mb-4">
+              <div>
+                <span class="text-xs font-mono text-accent-blue bg-accent-blue/10 px-2.5 py-1 rounded border border-accent-blue/20 inline-block mb-1">
+                  IT OPERATIONS & SUPPORT
+                </span>
+                <h3 class="text-xl font-bold text-white">IT Support Intern</h3>
+                <p class="text-gray-400 text-sm font-medium">PT Khong Guan Group</p>
+              </div>
+              <div class="text-xs font-mono text-gray-400 bg-dark-700/80 px-3 py-1.5 rounded-lg border border-white/5 self-start sm:self-auto">
+                Internship Role
+              </div>
+            </div>
+
+            <p class="text-gray-300 text-sm leading-relaxed mb-4">
+              Provided technical operational support in a active branch environment, resolving day-to-day user hardware, software, and networking issues.
+            </p>
+
+            <ul class="space-y-2 text-xs sm:text-sm text-gray-400 mb-6 list-disc list-inside">
+              <li>Troubleshot and maintained branch hardware, network connectivity, workstations, and local network printers.</li>
+              <li>Assisted staff with office productivity software including Microsoft Excel data queries, OneDrive sync configurations, and email setup.</li>
+              <li>Coordinated with head-office IT engineers when escalating complex system or network policy issues.</li>
+            </ul>
+
+            <div class="flex flex-wrap gap-2 pt-2 border-t border-white/5">
+              <span class="text-[11px] font-mono px-2.5 py-1 rounded bg-dark-700 text-gray-300">Hardware Diagnostics</span>
+              <span class="text-[11px] font-mono px-2.5 py-1 rounded bg-dark-700 text-gray-300">Network Troubleshooting</span>
+              <span class="text-[11px] font-mono px-2.5 py-1 rounded bg-dark-700 text-gray-300">OneDrive & Office 365</span>
+              <span class="text-[11px] font-mono px-2.5 py-1 rounded bg-dark-700 text-gray-300">Branch Escalation Protocols</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Experience 3: Lazada Warehouse Stock Opname -->
+        <div class="relative pl-8 sm:pl-10 group">
+          <div class="absolute -left-[17px] top-1.5 w-8 h-8 rounded-full bg-dark-800 border border-accent-emerald flex items-center justify-center text-accent-emerald group-hover:scale-110 transition-transform">
+            <i data-lucide="boxes" class="w-4 h-4"></i>
+          </div>
+
+          <div class="glass-card p-6 sm:p-8 rounded-2xl">
+            <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-2 mb-4">
+              <div>
+                <span class="text-xs font-mono text-accent-emerald bg-accent-emerald/10 px-2.5 py-1 rounded border border-accent-emerald/20 inline-block mb-1">
+                  OPERATIONAL LOGISTICS & AUDIT
+                </span>
+                <h3 class="text-xl font-bold text-white">E-commerce Warehouse Stock Opname</h3>
+                <p class="text-gray-400 text-sm font-medium">Lazada Logistics / E-commerce Warehouse</p>
+              </div>
+              <div class="text-xs font-mono text-gray-400 bg-dark-700/80 px-3 py-1.5 rounded-lg border border-white/5 self-start sm:self-auto">
+                Project Operational Role
+              </div>
+            </div>
+
+            <p class="text-gray-300 text-sm leading-relaxed mb-4">
+              Conducted intensive physical inventory audits and stock reconciliation in high-volume warehouse environments.
+            </p>
+
+            <ul class="space-y-2 text-xs sm:text-sm text-gray-400 mb-6 list-disc list-inside">
+              <li>Reconciled and verified physical inventory records against digital database entries for approximately 2,000 SKUs/items per day.</li>
+              <li>Maintained strict accuracy standards in identifying damaged items, mislocated stock, and barcode mapping errors.</li>
+            </ul>
+
+            <div class="flex flex-wrap gap-2 pt-2 border-t border-white/5">
+              <span class="text-[11px] font-mono px-2.5 py-1 rounded bg-dark-700 text-gray-300">Inventory Verification</span>
+              <span class="text-[11px] font-mono px-2.5 py-1 rounded bg-dark-700 text-gray-300">Stock Reconciliation</span>
+              <span class="text-[11px] font-mono px-2.5 py-1 rounded bg-dark-700 text-gray-300">High-Volume Accuracy</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Experience 4: Private Tutor (CettaCita) -->
+        <div class="relative pl-8 sm:pl-10 group">
+          <div class="absolute -left-[17px] top-1.5 w-8 h-8 rounded-full bg-dark-800 border border-accent-amber flex items-center justify-center text-accent-amber group-hover:scale-110 transition-transform">
+            <i data-lucide="book-open" class="w-4 h-4"></i>
+          </div>
+
+          <div class="glass-card p-6 sm:p-8 rounded-2xl">
+            <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-2 mb-4">
+              <div>
+                <span class="text-xs font-mono text-accent-amber bg-accent-amber/10 px-2.5 py-1 rounded border border-accent-amber/20 inline-block mb-1">
+                  EDUCATION & COMMUNICATION
+                </span>
+                <h3 class="text-xl font-bold text-white">Private Tutor & Instructor</h3>
+                <p class="text-gray-400 text-sm font-medium">CettaCita Education</p>
+              </div>
+              <div class="text-xs font-mono text-gray-400 bg-dark-700/80 px-3 py-1.5 rounded-lg border border-white/5 self-start sm:self-auto">
+                Educational Role
+              </div>
+            </div>
+
+            <p class="text-gray-300 text-sm leading-relaxed mb-4">
+              Taught logic, mathematics, and core academic subjects to elementary through high school students, personalizing pedagogical strategies for diverse learning speeds.
+            </p>
+
+            <ul class="space-y-2 text-xs sm:text-sm text-gray-400 mb-6 list-disc list-inside">
+              <li>Adapted complex mathematical concepts into easy-to-digest steps for students, including those with special learning requirements.</li>
+              <li>Fostered structured problem-solving mindsets and logical reasoning skills in students.</li>
+            </ul>
+
+            <div class="flex flex-wrap gap-2 pt-2 border-t border-white/5">
+              <span class="text-[11px] font-mono px-2.5 py-1 rounded bg-dark-700 text-gray-300">Technical Communication</span>
+              <span class="text-[11px] font-mono px-2.5 py-1 rounded bg-dark-700 text-gray-300">Mathematics & Logic</span>
+              <span class="text-[11px] font-mono px-2.5 py-1 rounded bg-dark-700 text-gray-300">Adaptive Teaching</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Experience 5: SD Muhammadiyah 01 Setu -->
+        <div class="relative pl-8 sm:pl-10 group">
+          <div class="absolute -left-[17px] top-1.5 w-8 h-8 rounded-full bg-dark-800 border border-gray-600 flex items-center justify-center text-gray-400 group-hover:scale-110 transition-transform">
+            <i data-lucide="globe" class="w-4 h-4"></i>
+          </div>
+
+          <div class="glass-card p-6 sm:p-8 rounded-2xl">
+            <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-2 mb-4">
+              <div>
+                <span class="text-xs font-mono text-gray-400 bg-dark-700 px-2.5 py-1 rounded border border-white/5 inline-block mb-1">
+                  DIGITAL MEDIA & CONTENT MANAGEMENT
+                </span>
+                <h3 class="text-xl font-bold text-white">Digital Marketing & Web Content Intern</h3>
+                <p class="text-gray-400 text-sm font-medium">SD Muhammadiyah 01 Setu</p>
+              </div>
+              <div class="text-xs font-mono text-gray-400 bg-dark-700/80 px-3 py-1.5 rounded-lg border border-white/5 self-start sm:self-auto">
+                Internship
+              </div>
+            </div>
+
+            <p class="text-gray-300 text-sm leading-relaxed mb-4">
+              Managed institutional WordPress web pages, designed digital promotional collateral, and produced video content for institutional outreach.
+            </p>
+
+            <div class="flex flex-wrap gap-2 pt-2 border-t border-white/5">
+              <span class="text-[11px] font-mono px-2.5 py-1 rounded bg-dark-700 text-gray-300">WordPress Administration</span>
+              <span class="text-[11px] font-mono px-2.5 py-1 rounded bg-dark-700 text-gray-300">CapCut Video Production</span>
+              <span class="text-[11px] font-mono px-2.5 py-1 rounded bg-dark-700 text-gray-300">Digital Asset Design</span>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- SECTION: FEATURED ENGINEERING & DATA PROJECTS -->
+    <section id="projects" class="py-20 bg-dark-800/40 border-t border-white/5">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        
+        <div class="mb-12">
+          <h2 class="text-xs font-mono font-semibold tracking-wider text-accent-blue uppercase">Selected Work & Case Studies</h2>
+          <p class="text-2xl sm:text-3xl font-bold text-white mt-1">Featured Technical Projects</p>
+          <p class="text-gray-400 text-sm mt-2">Detailed case studies highlighting analytical methodologies, embedded systems, and modern software development.</p>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+
+          <!-- PROJECT 1: Railway Project Data Validation -->
+          <div class="glass-card glass-card-hover rounded-2xl p-6 sm:p-8 flex flex-col justify-between border border-white/10">
+            <div>
+              <div class="flex items-center justify-between mb-4">
+                <span class="text-xs font-mono text-accent-violet bg-accent-violet/10 px-3 py-1 rounded-full border border-accent-violet/20">
+                  Data Quality & Auditing
+                </span>
+                <span class="text-xs font-mono text-gray-500">Case Study 01</span>
+              </div>
+
+              <h3 class="text-xl font-bold text-white mb-3">Railway Project Cost & RAB Data Validation Pipeline</h3>
+              
+              <p class="text-gray-300 text-xs sm:text-sm leading-relaxed mb-6">
+                Systematic verification workflow designed to audit complex Excel budget spreadsheets (RAB) for railway infrastructure projects. Focused on eliminating formula drift, cross-sheet discrepancies, and schema errors across 100 GB of aggregate project documentation.
+              </p>
+
+              <!-- Diagram Workflow Component -->
+              <div class="p-4 rounded-xl bg-dark-900 border border-white/5 mb-6 text-xs font-mono">
+                <div class="text-gray-500 mb-2 font-semibold">VALIDATION FLOW ARCHITECTURE:</div>
+                <div class="flex items-center justify-between text-gray-300 text-[11px] gap-1 overflow-x-auto pb-1">
+                  <div class="bg-dark-700 p-1.5 rounded border border-white/5 text-center">Raw RAB Data</div>
+                  <i data-lucide="arrow-right" class="w-3 h-3 text-accent-blue shrink-0"></i>
+                  <div class="bg-dark-700 p-1.5 rounded border border-white/5 text-center">Formula Check</div>
+                  <i data-lucide="arrow-right" class="w-3 h-3 text-accent-blue shrink-0"></i>
+                  <div class="bg-dark-700 p-1.5 rounded border border-white/5 text-center">Cross-Ref Lookup</div>
+                  <i data-lucide="arrow-right" class="w-3 h-3 text-accent-blue shrink-0"></i>
+                  <div class="bg-accent-emerald/20 text-accent-emerald p-1.5 rounded border border-accent-emerald/30 text-center font-bold">Verified File</div>
+                </div>
+              </div>
+
+              <!-- Tech Tag Cloud -->
+              <div class="flex flex-wrap gap-2 mb-6">
+                <span class="text-[11px] font-mono px-2 py-1 rounded bg-dark-700 text-gray-300">MS Excel Advanced</span>
+                <span class="text-[11px] font-mono px-2 py-1 rounded bg-dark-700 text-gray-300">VLOOKUP / INDEX-MATCH</span>
+                <span class="text-[11px] font-mono px-2 py-1 rounded bg-dark-700 text-gray-300">Data Consistency Rules</span>
+                <span class="text-[11px] font-mono px-2 py-1 rounded bg-dark-700 text-gray-300">Schema Verification</span>
+              </div>
+            </div>
+
+            <button onclick="openModal('modal-railway')" class="w-full py-2.5 rounded-lg bg-dark-700 hover:bg-dark-600 border border-white/10 text-xs font-mono text-accent-blue hover:text-white transition-colors flex items-center justify-center gap-2">
+              <i data-lucide="file-text" class="w-4 h-4"></i> Read Full Technical Case Study
+            </button>
+          </div>
+
+          <!-- PROJECT 2: IoT Automatic Catfish Feeding System -->
+          <div class="glass-card glass-card-hover rounded-2xl p-6 sm:p-8 flex flex-col justify-between border border-white/10">
+            <div>
+              <div class="flex items-center justify-between mb-4">
+                <span class="text-xs font-mono text-accent-blue bg-accent-blue/10 px-3 py-1 rounded-full border border-accent-blue/20">
+                  IoT & Embedded Systems
+                </span>
+                <span class="text-xs font-mono text-gray-500">Academic Thesis Project</span>
+              </div>
+
+              <h3 class="text-xl font-bold text-white mb-3">Automatic Feeding System for Sangkuriang Catfish</h3>
+              
+              <p class="text-gray-300 text-xs sm:text-sm leading-relaxed mb-6">
+                An Internet of Things (IoT) hardware-software solution designed to automate catfish feeding schedules and measure exact weight dosages using load-cell sensors and cloud control interfaces.
+              </p>
+
+              <!-- Hardware Tech Diagram -->
+              <div class="p-4 rounded-xl bg-dark-900 border border-white/5 mb-6 text-xs font-mono space-y-2">
+                <div class="text-gray-500 font-semibold">HARDWARE STACK:</div>
+                <div class="grid grid-cols-2 gap-2 text-[11px]">
+                  <div class="p-1.5 rounded bg-dark-700 border border-white/5"><span class="text-accent-blue">MCU:</span> ESP32 / Wemos D1 R32</div>
+                  <div class="p-1.5 rounded bg-dark-700 border border-white/5"><span class="text-accent-blue">SENSOR:</span> HX711 Load Cell</div>
+                  <div class="p-1.5 rounded bg-dark-700 border border-white/5"><span class="text-accent-blue">ACTUATOR:</span> Servo + Relay</div>
+                  <div class="p-1.5 rounded bg-dark-700 border border-white/5"><span class="text-accent-blue">CLOUD:</span> Blynk IoT Platform</div>
+                </div>
+              </div>
+
+              <!-- Tech Tag Cloud -->
+              <div class="flex flex-wrap gap-2 mb-6">
+                <span class="text-[11px] font-mono px-2 py-1 rounded bg-dark-700 text-gray-300">ESP32 / Wemos</span>
+                <span class="text-[11px] font-mono px-2 py-1 rounded bg-dark-700 text-gray-300">HX711 Interface</span>
+                <span class="text-[11px] font-mono px-2 py-1 rounded bg-dark-700 text-gray-300">C++ / Arduino IDE</span>
+                <span class="text-[11px] font-mono px-2 py-1 rounded bg-dark-700 text-gray-300">Blynk App API</span>
+              </div>
+            </div>
+
+            <button onclick="openModal('modal-iot')" class="w-full py-2.5 rounded-lg bg-dark-700 hover:bg-dark-600 border border-white/10 text-xs font-mono text-accent-blue hover:text-white transition-colors flex items-center justify-center gap-2">
+              <i data-lucide="cpu" class="w-4 h-4"></i> Read IoT System Case Study
+            </button>
+          </div>
+
+          <!-- PROJECT 3: Personal Portfolio Website -->
+          <div class="glass-card glass-card-hover rounded-2xl p-6 sm:p-8 flex flex-col justify-between border border-white/10">
+            <div>
+              <div class="flex items-center justify-between mb-4">
+                <span class="text-xs font-mono text-accent-emerald bg-accent-emerald/10 px-3 py-1 rounded-full border border-accent-emerald/20">
+                  Web Engineering & UX
+                </span>
+                <span class="text-xs font-mono text-gray-500">Production Web App</span>
+              </div>
+
+              <h3 class="text-xl font-bold text-white mb-3">Modern Personal Portfolio & Interactive Data Engine</h3>
+              
+              <p class="text-gray-300 text-xs sm:text-sm leading-relaxed mb-6">
+                Built from scratch to demonstrate senior UI engineering standards, responsive layout architecture, client-side data filtering algorithms, and modern developer design aesthetics.
+              </p>
+
+              <div class="flex flex-wrap gap-2 mb-6">
+                <span class="text-[11px] font-mono px-2 py-1 rounded bg-dark-700 text-gray-300">HTML5 / Tailwind CSS</span>
+                <span class="text-[11px] font-mono px-2 py-1 rounded bg-dark-700 text-gray-300">Vanilla JS (ES6+)</span>
+                <span class="text-[11px] font-mono px-2 py-1 rounded bg-dark-700 text-gray-300">HTML5 Canvas Engine</span>
+                <span class="text-[11px] font-mono px-2 py-1 rounded bg-dark-700 text-gray-300">Responsive UI</span>
+              </div>
+            </div>
+
+            <a href="#about" class="w-full py-2.5 rounded-lg bg-dark-700 hover:bg-dark-600 border border-white/10 text-xs font-mono text-accent-emerald hover:text-white transition-colors flex items-center justify-center gap-2">
+              <i data-lucide="eye" class="w-4 h-4"></i> Currently Viewing Live Project
+            </a>
+          </div>
+
+          <!-- PROJECT 4: Web Application Experiments -->
+          <div class="glass-card glass-card-hover rounded-2xl p-6 sm:p-8 flex flex-col justify-between border border-white/10">
+            <div>
+              <div class="flex items-center justify-between mb-4">
+                <span class="text-xs font-mono text-accent-amber bg-accent-amber/10 px-3 py-1 rounded-full border border-accent-amber/20">
+                  Web Applications
+                </span>
+                <span class="text-xs font-mono text-gray-500">Frontend / PHP</span>
+              </div>
+
+              <h3 class="text-xl font-bold text-white mb-3">Educational & Productivity Web Modules</h3>
+              
+              <p class="text-gray-300 text-xs sm:text-sm leading-relaxed mb-6">
+                A collection of full-stack and frontend experiments including the CettaCita learning interface modules and interactive web utilities built with PHP, Bootstrap, JavaScript, and MySQL.
+              </p>
+
+              <div class="flex flex-wrap gap-2 mb-6">
+                <span class="text-[11px] font-mono px-2 py-1 rounded bg-dark-700 text-gray-300">PHP / CodeIgniter</span>
+                <span class="text-[11px] font-mono px-2 py-1 rounded bg-dark-700 text-gray-300">MySQL Database</span>
+                <span class="text-[11px] font-mono px-2 py-1 rounded bg-dark-700 text-gray-300">Bootstrap / Tailwind</span>
+              </div>
+            </div>
+
+            <button onclick="openModal('modal-web')" class="w-full py-2.5 rounded-lg bg-dark-700 hover:bg-dark-600 border border-white/10 text-xs font-mono text-accent-amber hover:text-white transition-colors flex items-center justify-center gap-2">
+              <i data-lucide="layers" class="w-4 h-4"></i> View Web Stack Breakdown
+            </button>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- SECTION: INTERACTIVE DATA ANALYTICS LAB -->
+    <section id="data-lab" class="py-20 border-t border-white/10 bg-dark-900 relative">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        
+        <!-- Section Header -->
+        <div class="max-w-3xl mb-10">
+          <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-accent-violet/10 border border-accent-violet/20 text-accent-violet text-xs font-mono mb-3">
+            <i data-lucide="terminal" class="w-3.5 h-3.5"></i>
+            <span>Interactive Data Analytics Demonstration</span>
+          </div>
+          <h2 class="text-2xl sm:text-4xl font-extrabold text-white tracking-tight">
+            From Data Processing to <span class="text-accent-violet">Data Analytics</span>
+          </h2>
+          <p class="text-gray-300 text-sm sm:text-base mt-2">
+            This live interactive environment simulates the transformation of raw infrastructure budget entries into actionable analytical insights. Use the filters below to manipulate the synthetic dataset in real time.
+          </p>
+        </div>
+
+        <!-- LAB INTERACTIVE DASHBOARD CONTAINER -->
+        <div class="glass-card rounded-2xl border border-white/10 p-6 shadow-2xl space-y-6">
+          
+          <!-- Controls & View Mode Bar -->
+          <div class="flex flex-col lg:flex-row lg:items-center justify-between gap-4 pb-6 border-b border-white/10">
+            
+            <!-- Category Filter Dropdown -->
+            <div class="flex flex-wrap items-center gap-3">
+              <label class="text-xs font-mono text-gray-400">FILTER DOMAIN:</label>
+              <select id="lab-category-filter" onchange="updateDataLab()" class="bg-dark-800 border border-white/15 text-gray-200 text-xs font-mono rounded-lg px-3 py-2 focus:outline-none focus:border-accent-blue">
+                <option value="ALL">All Railway Infrastructure Domains</option>
+                <option value="Overhead Line">Overhead Line Equipment (Lalin)</option>
+                <option value="Signaling">Signaling & Interlocking</option>
+                <option value="Telecommunications">Telecommunications</option>
+                <option value="Track & Bridge">Track & Civil Bridges</option>
+              </select>
+
+              <!-- Status Flag Filter -->
+              <select id="lab-status-filter" onchange="updateDataLab()" class="bg-dark-800 border border-white/15 text-gray-200 text-xs font-mono rounded-lg px-3 py-2 focus:outline-none focus:border-accent-blue">
+                <option value="ALL">All Audit Statuses</option>
+                <option value="DISCREPANCY">Discrepancy / Over-Budget Only</option>
+                <option value="VERIFIED">Verified Clean Only</option>
+              </select>
+            </div>
+
+            <!-- View Mode Selector Buttons -->
+            <div class="flex items-center gap-1 bg-dark-800 p-1 rounded-lg border border-white/10 self-start lg:self-auto">
+              <button id="btn-view-raw" onclick="setLabView('raw')" class="px-3 py-1.5 rounded text-xs font-mono text-white bg-dark-700 transition-colors">Raw Table</button>
+              <button id="btn-view-cleaned" onclick="setLabView('cleaned')" class="px-3 py-1.5 rounded text-xs font-mono text-gray-400 hover:text-white transition-colors">Cleaned Records</button>
+              <button id="btn-view-pivot" onclick="setLabView('pivot')" class="px-3 py-1.5 rounded text-xs font-mono text-gray-400 hover:text-white transition-colors">Pivot Summary</button>
+            </div>
+          </div>
+
+          <!-- Dynamic Metric KPI Cards -->
+          <div class="grid grid-cols-2 md:grid-cols-4 gap-4">
+            <div class="bg-dark-800/80 p-4 rounded-xl border border-white/5">
+              <div class="text-[11px] font-mono text-gray-400">TOTAL BUDGET (IDR)</div>
+              <div id="metric-total-budget" class="text-lg sm:text-xl font-bold font-mono text-white mt-1">Rp 0</div>
+              <div class="text-[10px] text-gray-500 mt-0.5">Sum of active records</div>
+            </div>
+
+            <div class="bg-dark-800/80 p-4 rounded-xl border border-white/5">
+              <div class="text-[11px] font-mono text-gray-400">REALIZED EXPENDITURE</div>
+              <div id="metric-realized" class="text-lg sm:text-xl font-bold font-mono text-accent-blue mt-1">Rp 0</div>
+              <div class="text-[10px] text-gray-500 mt-0.5">Actual line item cost</div>
+            </div>
+
+            <div class="bg-dark-800/80 p-4 rounded-xl border border-white/5">
+              <div class="text-[11px] font-mono text-gray-400">VARIANCE / DISCREPANCY</div>
+              <div id="metric-variance" class="text-lg sm:text-xl font-bold font-mono text-accent-amber mt-1">Rp 0</div>
+              <div class="text-[10px] text-gray-500 mt-0.5">Calculated net delta</div>
+            </div>
+
+            <div class="bg-dark-800/80 p-4 rounded-xl border border-white/5">
+              <div class="text-[11px] font-mono text-gray-400">AUDIT FLAG COUNT</div>
+              <div id="metric-flag-count" class="text-lg sm:text-xl font-bold font-mono text-red-400 mt-1">0 Items</div>
+              <div class="text-[10px] text-gray-500 mt-0.5">Action items requiring review</div>
+            </div>
+          </div>
+
+          <!-- Interactive Visualization Chart (Canvas Rendered) -->
+          <div class="bg-dark-800/60 p-5 rounded-xl border border-white/5">
+            <div class="flex items-center justify-between mb-4">
+              <span class="text-xs font-mono text-gray-300 font-semibold flex items-center gap-2">
+                <i data-lucide="bar-chart-3" class="w-4 h-4 text-accent-blue"></i>
+                Domain Cost Distribution & Variance Visualizer (Synthetic Data)
+              </span>
+              <span class="text-[10px] font-mono text-gray-500">HTML5 Canvas Engine</span>
+            </div>
+            <div class="relative w-full h-48 sm:h-64">
+              <canvas id="data-lab-chart" class="w-full h-full block"></canvas>
+            </div>
+          </div>
+
+          <!-- Data Table View Display -->
+          <div class="overflow-x-auto rounded-xl border border-white/10 bg-dark-900/90">
+            <table class="w-full text-left font-mono text-xs text-gray-300">
+              <thead class="bg-dark-800 text-gray-400 border-b border-white/10 uppercase text-[10px] tracking-wider">
+                <tr>
+                  <th class="p-3">Item Code</th>
+                  <th class="p-3">Domain Category</th>
+                  <th class="p-3">Description</th>
+                  <th class="p-3 text-right">RAB Budget</th>
+                  <th class="p-3 text-right">Actual Cost</th>
+                  <th class="p-3 text-right">Variance</th>
+                  <th class="p-3 text-center">Validation Status</th>
+                </tr>
+              </thead>
+              <tbody id="lab-table-body" class="divide-y divide-white/5">
+                <!-- Rows injected dynamically via JS -->
+              </tbody>
+            </table>
+          </div>
+
+          <!-- Analytical Findings Summary -->
+          <div class="p-4 rounded-xl bg-dark-800/80 border border-accent-blue/20 flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4 text-xs font-mono">
+            <div class="flex items-start gap-3">
+              <i data-lucide="lightbulb" class="w-5 h-5 text-accent-blue shrink-0 mt-0.5"></i>
+              <div>
+                <span class="text-white font-semibold block">Analytical Insight Observation:</span>
+                <span class="text-gray-400" id="lab-insight-text">
+                  Filtering across infrastructure records highlights consistent variance patterns in telecommunication replacement modules due to market price adjustments.
+                </span>
+              </div>
+            </div>
+            <span class="text-[10px] text-gray-500 bg-dark-900 px-2 py-1 rounded border border-white/5 whitespace-nowrap">
+              LOGIC: REAL-TIME JS AGGREGATION
+            </span>
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+
+    <!-- SECTION: SKILLS MATRIX & ROADMAP -->
+    <section id="skills" class="py-20 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      
+      <div class="mb-12">
+        <h2 class="text-xs font-mono font-semibold tracking-wider text-accent-blue uppercase">Technical Competencies</h2>
+        <p class="text-2xl sm:text-3xl font-bold text-white mt-1">Skills & Tooling Matrix</p>
+        <p class="text-gray-400 text-sm mt-2">Verified technical proficiencies categorized by domain application.</p>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+        
+        <!-- Category 1: Data Processing -->
+        <div class="glass-card p-6 rounded-2xl border border-white/5">
+          <div class="flex items-center gap-3 mb-4">
+            <div class="p-2 rounded-lg bg-accent-violet/10 text-accent-violet">
+              <i data-lucide="table" class="w-5 h-5"></i>
+            </div>
+            <h3 class="font-bold text-white text-base">Spreadsheet & Data</h3>
+          </div>
+          <ul class="space-y-2.5 text-xs font-mono text-gray-300">
+            <li class="flex items-center justify-between">
+              <span>Microsoft Excel (Advanced)</span>
+              <span class="text-accent-emerald">Expert</span>
+            </li>
+            <li class="flex items-center justify-between">
+              <span>Data Cleaning & Validation</span>
+              <span class="text-accent-emerald">Advanced</span>
+            </li>
+            <li class="flex items-center justify-between">
+              <span>Pivot Tables & VLOOKUP</span>
+              <span class="text-accent-emerald">Advanced</span>
+            </li>
+            <li class="flex items-center justify-between">
+              <span>Structured Cost Auditing</span>
+              <span class="text-accent-blue">Proficient</span>
+            </li>
+          </ul>
+        </div>
+
+        <!-- Category 2: IT Operations -->
+        <div class="glass-card p-6 rounded-2xl border border-white/5">
+          <div class="flex items-center gap-3 mb-4">
+            <div class="p-2 rounded-lg bg-accent-blue/10 text-accent-blue">
+              <i data-lucide="hard-drive" class="w-5 h-5"></i>
+            </div>
+            <h3 class="font-bold text-white text-base">IT & Infrastructure</h3>
+          </div>
+          <ul class="space-y-2.5 text-xs font-mono text-gray-300">
+            <li class="flex items-center justify-between">
+              <span>Hardware Troubleshooting</span>
+              <span class="text-accent-emerald">Advanced</span>
+            </li>
+            <li class="flex items-center justify-between">
+              <span>Network Connectivity</span>
+              <span class="text-accent-blue">Proficient</span>
+            </li>
+            <li class="flex items-center justify-between">
+              <span>Printer & Workstation Setup</span>
+              <span class="text-accent-emerald">Advanced</span>
+            </li>
+            <li class="flex items-center justify-between">
+              <span>OneDrive & Productivity Support</span>
+              <span class="text-accent-emerald">Advanced</span>
+            </li>
+          </ul>
+        </div>
+
+        <!-- Category 3: Software & Web Development -->
+        <div class="glass-card p-6 rounded-2xl border border-white/5">
+          <div class="flex items-center gap-3 mb-4">
+            <div class="p-2 rounded-lg bg-accent-emerald/10 text-accent-emerald">
+              <i data-lucide="code-2" class="w-5 h-5"></i>
+            </div>
+            <h3 class="font-bold text-white text-base">Web Development</h3>
+          </div>
+          <ul class="space-y-2.5 text-xs font-mono text-gray-300">
+            <li class="flex items-center justify-between">
+              <span>HTML5 / CSS3 / Tailwind</span>
+              <span class="text-accent-emerald">Advanced</span>
+            </li>
+            <li class="flex items-center justify-between">
+              <span>JavaScript (ES6+)</span>
+              <span class="text-accent-blue">Proficient</span>
+            </li>
+            <li class="flex items-center justify-between">
+              <span>PHP & CodeIgniter</span>
+              <span class="text-accent-blue">Intermediate</span>
+            </li>
+            <li class="flex items-center justify-between">
+              <span>WordPress Administration</span>
+              <span class="text-accent-emerald">Advanced</span>
+            </li>
+          </ul>
+        </div>
+
+        <!-- Category 4: Learning & Future Expansion -->
+        <div class="glass-card p-6 rounded-2xl border border-white/5 bg-dark-800/30">
+          <div class="flex items-center gap-3 mb-4">
+            <div class="p-2 rounded-lg bg-accent-amber/10 text-accent-amber">
+              <i data-lucide="trending-up" class="w-5 h-5"></i>
+            </div>
+            <h3 class="font-bold text-white text-base">Future Expansion</h3>
+          </div>
+          <p class="text-xs text-gray-400 mb-3 leading-relaxed">
+            Active expansion roadmap targeting deeper analytics engineering capabilities:
+          </p>
+          <div class="space-y-2 text-xs font-mono">
+            <div class="p-2 rounded bg-dark-700/60 border border-white/5 flex items-center justify-between text-gray-300">
+              <span>SQL Querying & PostgreSQL</span>
+              <span class="text-accent-amber text-[10px]">In Progress</span>
+            </div>
+            <div class="p-2 rounded bg-dark-700/60 border border-white/5 flex items-center justify-between text-gray-300">
+              <span>Python Data Stack (Pandas)</span>
+              <span class="text-accent-amber text-[10px]">In Progress</span>
+            </div>
+            <div class="p-2 rounded bg-dark-700/60 border border-white/5 flex items-center justify-between text-gray-300">
+              <span>Power BI Visualization</span>
+              <span class="text-accent-amber text-[10px]">Planned</span>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- SECTION: INTERACTIVE CONTACT & FOOTER -->
+    <section id="contact" class="py-20 bg-dark-800/60 border-t border-white/10">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        
+        <div class="grid grid-cols-1 lg:grid-cols-12 gap-12">
+          
+          <!-- Contact Direct Info Column -->
+          <div class="lg:col-span-5 space-y-6">
+            <div>
+              <h2 class="text-xs font-mono font-semibold tracking-wider text-accent-blue uppercase">Initiate Contact</h2>
+              <p class="text-2xl sm:text-3xl font-bold text-white mt-1">Let's Discuss Opportunities</p>
+              <p class="text-gray-400 text-sm mt-2">
+                Open to full-time roles in IT Support, Data Processing, Data Analytics, or IT Operations.
+              </p>
+            </div>
+
+            <div class="space-y-4 text-sm font-mono text-gray-300 pt-2">
+              <div class="flex items-center gap-3 p-3.5 rounded-xl bg-dark-900 border border-white/5">
+                <i data-lucide="mail" class="w-5 h-5 text-accent-blue shrink-0"></i>
+                <div>
+                  <div class="text-[10px] text-gray-500">PRIMARY EMAIL</div>
+                  <a href="mailto:rama.adadio@example.com" class="hover:text-accent-blue text-xs sm:text-sm transition-colors">rama.adadio@example.com</a>
+                </div>
+              </div>
+
+              <div class="flex items-center gap-3 p-3.5 rounded-xl bg-dark-900 border border-white/5">
+                <i data-lucide="map-pin" class="w-5 h-5 text-accent-violet shrink-0"></i>
+                <div>
+                  <div class="text-[10px] text-gray-500">LOCATION</div>
+                  <div class="text-xs sm:text-sm">Bekasi / Jakarta, Indonesia</div>
+                </div>
+              </div>
+
+              <div class="flex items-center gap-3 p-3.5 rounded-xl bg-dark-900 border border-white/5">
+                <i data-lucide="graduation-cap" class="w-5 h-5 text-accent-emerald shrink-0"></i>
+                <div>
+                  <div class="text-[10px] text-gray-500">INSTITUTION</div>
+                  <div class="text-xs sm:text-sm">Institut Bisnis Muhammadiyah Bekasi</div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Social Links -->
+            <div class="flex items-center gap-3 pt-2">
+              <a href="#" target="_blank" class="p-3 rounded-xl bg-dark-900 border border-white/10 hover:border-accent-blue text-gray-400 hover:text-white transition-all">
+                <i data-lucide="linkedin" class="w-5 h-5"></i>
+              </a>
+              <a href="#" target="_blank" class="p-3 rounded-xl bg-dark-900 border border-white/10 hover:border-accent-blue text-gray-400 hover:text-white transition-all">
+                <i data-lucide="github" class="w-5 h-5"></i>
+              </a>
+            </div>
+          </div>
+
+          <!-- Interactive Contact Form Simulation -->
+          <div class="lg:col-span-7">
+            <div class="glass-card p-6 sm:p-8 rounded-2xl border border-white/10">
+              <form id="contact-form" onsubmit="handleFormSubmit(event)" class="space-y-4">
+                <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                  <div>
+                    <label class="block text-xs font-mono text-gray-400 mb-1.5">YOUR NAME *</label>
+                    <input type="text" required placeholder="e.g. Sarah Jenkins" class="w-full bg-dark-900 border border-white/10 rounded-lg px-3.5 py-2.5 text-xs text-white placeholder-gray-600 focus:outline-none focus:border-accent-blue">
+                  </div>
+                  <div>
+                    <label class="block text-xs font-mono text-gray-400 mb-1.5">EMAIL ADDRESS *</label>
+                    <input type="email" required placeholder="recruiter@company.com" class="w-full bg-dark-900 border border-white/10 rounded-lg px-3.5 py-2.5 text-xs text-white placeholder-gray-600 focus:outline-none focus:border-accent-blue">
+                  </div>
+                </div>
+
+                <div>
+                  <label class="block text-xs font-mono text-gray-400 mb-1.5">INQUIRY TYPE</label>
+                  <select class="w-full bg-dark-900 border border-white/10 rounded-lg px-3.5 py-2.5 text-xs text-white focus:outline-none focus:border-accent-blue">
+                    <option>Full-Time Job Opportunity (IT / Data)</option>
+                    <option>Contract Data Processing Project</option>
+                    <option>Technical Inquiry</option>
+                    <option>General Networking</option>
+                  </select>
+                </div>
+
+                <div>
+                  <label class="block text-xs font-mono text-gray-400 mb-1.5">MESSAGE *</label>
+                  <textarea required rows="4" placeholder="Hello Rama, I reviewed your portfolio and would like to discuss..." class="w-full bg-dark-900 border border-white/10 rounded-lg px-3.5 py-2.5 text-xs text-white placeholder-gray-600 focus:outline-none focus:border-accent-blue"></textarea>
+                </div>
+
+                <button type="submit" class="w-full py-3 rounded-lg bg-accent-blue hover:bg-blue-600 text-white font-mono text-xs font-semibold transition-all shadow-lg shadow-accent-blue/20 flex items-center justify-center gap-2">
+                  <i data-lucide="send" class="w-4 h-4"></i> Send Message
+                </button>
+
+                <!-- Feedback Toast Message Box -->
+                <div id="form-feedback" class="hidden p-3 rounded-lg text-xs font-mono border text-center"></div>
+              </form>
+            </div>
+          </div>
+
+        </div>
+
+        <!-- Footer Bottom Bar -->
+        <div class="mt-16 pt-8 border-t border-white/5 flex flex-col sm:flex-row items-center justify-between text-xs font-mono text-gray-500 gap-4">
+          <div>
+            © 2026 Rama Adadio. Informatics Engineering Graduate (S.Kom).
+          </div>
+          <div class="flex items-center gap-4 text-[11px]">
+            <span>Institut Bisnis Muhammadiyah Bekasi</span>
+            <span>•</span>
+            <span class="text-accent-emerald">GPA 3.50</span>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+  </main>
+
+  <!-- MODAL: RAILWAY CASE STUDY DETAIL -->
+  <div id="modal-railway" class="fixed inset-0 z-50 hidden bg-dark-900/90 backdrop-blur-md flex items-center justify-center p-4">
+    <div class="glass-card bg-dark-800 border border-white/15 rounded-2xl max-w-2xl w-full p-6 sm:p-8 max-h-[90vh] overflow-y-auto relative space-y-4">
+      <button onclick="closeModal('modal-railway')" class="absolute top-4 right-4 text-gray-400 hover:text-white p-2">
+        <i data-lucide="x" class="w-5 h-5"></i>
+      </button>
+
+      <span class="text-xs font-mono text-accent-violet bg-accent-violet/10 px-2.5 py-1 rounded border border-accent-violet/20 inline-block">
+        DETAILED CASE STUDY
+      </span>
+      <h3 class="text-xl font-bold text-white">Railway Infrastructure RAB Data Validation</h3>
+      <div class="text-xs font-mono text-gray-400">Project Period: Nov 2024 – Jan 2025 | PT KAI / Pentagraphi</div>
+
+      <div class="space-y-3 text-xs sm:text-sm text-gray-300 leading-relaxed border-t border-white/10 pt-4">
+        <p><strong class="text-white">Context & Problem:</strong> Railway infrastructure projects involve multi-departmental financial documentation with thousands of cost lines. Formulas across spreadsheets frequently suffer drift, causing miscalculated total project budgets.</p>
+        <p><strong class="text-white">My Role & Approach:</strong> Verified line-item accuracy, validated cross-referencing formula structures, and flagged discrepancies in 2024 expenditure estimates (RAB) across telecom, signaling, overhead lines, and civil structures across ~100 GB of aggregate project files.</p>
+        <p><strong class="text-white">Outcome:</strong> Delivered verified, clean datasets to senior consultants, preventing compounding calculation errors before budget finalization.</p>
+      </div>
+
+      <div class="pt-4 border-t border-white/10 flex justify-end">
+        <button onclick="closeModal('modal-railway')" class="px-4 py-2 rounded-lg bg-dark-700 text-xs font-mono text-white hover:bg-dark-600">Close Window</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- MODAL: IOT CATFISH SYSTEM CASE STUDY DETAIL -->
+  <div id="modal-iot" class="fixed inset-0 z-50 hidden bg-dark-900/90 backdrop-blur-md flex items-center justify-center p-4">
+    <div class="glass-card bg-dark-800 border border-white/15 rounded-2xl max-w-2xl w-full p-6 sm:p-8 max-h-[90vh] overflow-y-auto relative space-y-4">
+      <button onclick="closeModal('modal-iot')" class="absolute top-4 right-4 text-gray-400 hover:text-white p-2">
+        <i data-lucide="x" class="w-5 h-5"></i>
+      </button>
+
+      <span class="text-xs font-mono text-accent-blue bg-accent-blue/10 px-2.5 py-1 rounded border border-accent-blue/20 inline-block">
+        IOT THESIS CASE STUDY
+      </span>
+      <h3 class="text-xl font-bold text-white">Automatic Catfish Feeding System</h3>
+      <div class="text-xs font-mono text-gray-400">Informatics Thesis Project | Institut Bisnis Muhammadiyah Bekasi</div>
+
+      <div class="space-y-3 text-xs sm:text-sm text-gray-300 leading-relaxed border-t border-white/10 pt-4">
+        <p><strong class="text-white">Objective:</strong> Eliminate overfeeding and manual feeding labor in Sangkuriang catfish farming through automated weight-measured feed dispensing.</p>
+        <p><strong class="text-white">System Architecture:</strong> Integrated an ESP32 microcontroller with an HX711 load-cell amplifier for real-time feed weight feedback. Configured servo actuators to open dispensing gates until exact target weight was registered, sending telemetry to Blynk cloud interface.</p>
+        <p><strong class="text-white">Key Engineering Learnings:</strong> Calibration of analog load sensors, hardware noise filtering, and micro-controller WiFi reconnect fault tolerance.</p>
+      </div>
+
+      <div class="pt-4 border-t border-white/10 flex justify-end">
+        <button onclick="closeModal('modal-iot')" class="px-4 py-2 rounded-lg bg-dark-700 text-xs font-mono text-white hover:bg-dark-600">Close Window</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- MODAL: WEB PROJECTS -->
+  <div id="modal-web" class="fixed inset-0 z-50 hidden bg-dark-900/90 backdrop-blur-md flex items-center justify-center p-4">
+    <div class="glass-card bg-dark-800 border border-white/15 rounded-2xl max-w-2xl w-full p-6 sm:p-8 max-h-[90vh] overflow-y-auto relative space-y-4">
+      <button onclick="closeModal('modal-web')" class="absolute top-4 right-4 text-gray-400 hover:text-white p-2">
+        <i data-lucide="x" class="w-5 h-5"></i>
+      </button>
+
+      <span class="text-xs font-mono text-accent-amber bg-accent-amber/10 px-2.5 py-1 rounded border border-accent-amber/20 inline-block">
+        WEB APPLICATIONS BREAKDOWN
+      </span>
+      <h3 class="text-xl font-bold text-white">Educational & Web Stack Projects</h3>
+
+      <div class="space-y-3 text-xs sm:text-sm text-gray-300 leading-relaxed border-t border-white/10 pt-4">
+        <p><strong class="text-white">CettaCita Web Platform:</strong> Developed web modules to support student learning materials, homework submissions, and schedule tracking using PHP and Bootstrap.</p>
+        <p><strong class="text-white">WordPress Implementations:</strong> Designed and maintained custom school landing pages and news feeds at SD Muhammadiyah 01 Setu, optimizing image assets and responsive typography.</p>
+      </div>
+
+      <div class="pt-4 border-t border-white/10 flex justify-end">
+        <button onclick="closeModal('modal-web')" class="px-4 py-2 rounded-lg bg-dark-700 text-xs font-mono text-white hover:bg-dark-600">Close Window</button>
+      </div>
+    </div>
+  </div>
+
+
+  <!-- JAVASCRIPT LOGIC ENGINE -->
+  <script>
+    // Initialize Lucide Icons
+    document.addEventListener("DOMContentLoaded", () => {
+      lucide.createIcons();
+      initDataLab();
+    });
+
+    // Mobile Navigation Toggle Logic
+    const mobileBtn = document.getElementById('mobile-menu-btn');
+    const mobileMenu = document.getElementById('mobile-menu');
+
+    mobileBtn.addEventListener('click', () => {
+      mobileMenu.classList.toggle('hidden');
+    });
+
+    // Close mobile menu when link clicked
+    mobileMenu.querySelectorAll('a').forEach(link => {
+      link.addEventListener('click', () => {
+        mobileMenu.classList.add('hidden');
+      });
+    });
+
+    // CV Download Trigger Simulation
+    function triggerCVDownload(e) {
+      // Message feedback
+      const toast = document.createElement('div');
+      toast.className = 'fixed bottom-5 right-5 z-50 bg-accent-blue text-white px-4 py-2.5 rounded-lg text-xs font-mono shadow-xl border border-white/20 flex items-center gap-2';
+      toast.innerHTML = '<i data-lucide="check-circle-2" class="w-4 h-4"></i> CV Download Initiated (Rama_Adadio_CV.pdf)';
+      document.body.appendChild(toast);
+      lucide.createIcons();
+      setTimeout(() => toast.remove(), 4000);
+    }
+
+    // Modal Control Logic
+    function openModal(modalId) {
+      document.getElementById(modalId).classList.remove('hidden');
+    }
+    function closeModal(modalId) {
+      document.getElementById(modalId).classList.add('hidden');
+    }
+
+    // Contact Form Handler Simulation
+    function handleFormSubmit(e) {
+      e.preventDefault();
+      const feedback = document.getElementById('form-feedback');
+      feedback.classList.remove('hidden', 'bg-red-900/50', 'text-red-300', 'border-red-500/30');
+      feedback.classList.add('bg-accent-emerald/10', 'text-accent-emerald', 'border-accent-emerald/30');
+      feedback.innerHTML = '✓ Message received! Thank you, Rama will respond within 24 hours.';
+      
+      e.target.reset();
+      setTimeout(() => feedback.classList.add('hidden'), 6000);
+    }
+
+
+    /* ==========================================================================
+       INTERACTIVE DATA ANALYTICS LAB ENGINE
+       ========================================================================== */
+
+    // Synthetic Railway Infrastructure Dataset
+    const syntheticData = [
+      { id: "RAB-LAL-001", domain: "Overhead Line", desc: "Catenary Wire Replacement Line 1", budget: 145000000, actual: 145000000, status: "VERIFIED" },
+      { id: "RAB-LAL-002", domain: "Overhead Line", desc: "Substation Transformer Maintenance", budget: 220000000, actual: 238000000, status: "DISCREPANCY" },
+      { id: "RAB-SIG-011", domain: "Signaling", desc: "Interlocking Relay Unit Calibration", budget: 85000000, actual: 85000000, status: "VERIFIED" },
+      { id: "RAB-SIG-012", domain: "Signaling", desc: "Track Circuit Sensor Modules", budget: 110000000, actual: 125000000, status: "DISCREPANCY" },
+      { id: "RAB-TEL-021", domain: "Telecommunications", desc: "Fiber Optic Line Extension Segment 4", budget: 310000000, actual: 295000000, status: "VERIFIED" },
+      { id: "RAB-TEL-022", domain: "Telecommunications", desc: "Radio Base Station Power Backups", budget: 95000000, actual: 108000000, status: "DISCREPANCY" },
+      { id: "RAB-TRK-031", domain: "Track & Bridge", desc: "Concrete Sleeper Replacement Km 42", budget: 450000000, actual: 450000000, status: "VERIFIED" },
+      { id: "RAB-TRK-032", domain: "Track & Bridge", desc: "Steel Truss Bridge Anti-Corrosion Paint", budget: 180000000, actual: 198000000, status: "DISCREPANCY" }
+    ];
+
+    let currentLabView = 'raw'; // 'raw', 'cleaned', 'pivot'
+
+    function initDataLab() {
+      updateDataLab();
+      window.addEventListener('resize', drawLabChart);
+    }
+
+    function setLabView(mode) {
+      currentLabView = mode;
+      
+      // Update UI buttons
+      document.getElementById('btn-view-raw').className = mode === 'raw' ? 'px-3 py-1.5 rounded text-xs font-mono text-white bg-dark-700' : 'px-3 py-1.5 rounded text-xs font-mono text-gray-400 hover:text-white';
+      document.getElementById('btn-view-cleaned').className = mode === 'cleaned' ? 'px-3 py-1.5 rounded text-xs font-mono text-white bg-dark-700' : 'px-3 py-1.5 rounded text-xs font-mono text-gray-400 hover:text-white';
+      document.getElementById('btn-view-pivot').className = mode === 'pivot' ? 'px-3 py-1.5 rounded text-xs font-mono text-white bg-dark-700' : 'px-3 py-1.5 rounded text-xs font-mono text-gray-400 hover:text-white';
+
+      updateDataLab();
+    }
+
+    function updateDataLab() {
+      const catFilter = document.getElementById('lab-category-filter').value;
+      const statusFilter = document.getElementById('lab-status-filter').value;
+
+      // Filter dataset
+      let filtered = syntheticData.filter(item => {
+        const matchesCat = (catFilter === 'ALL' || item.domain === catFilter);
+        const matchesStatus = (statusFilter === 'ALL' || item.status === statusFilter);
+        return matchesCat && matchesStatus;
+      });
+
+      // Calculate Metrics
+      let totalBudget = 0;
+      let totalActual = 0;
+      let flagCount = 0;
+
+      filtered.forEach(item => {
+        totalBudget += item.budget;
+        totalActual += item.actual;
+        if (item.status === 'DISCREPANCY') flagCount++;
+      });
+
+      const totalVariance = totalActual - totalBudget;
+
+      // Format Currency IDR
+      const fmt = (num) => 'Rp ' + num.toLocaleString('id-ID');
+
+      document.getElementById('metric-total-budget').innerText = fmt(totalBudget);
+      document.getElementById('metric-realized').innerText = fmt(totalActual);
+      document.getElementById('metric-variance').innerText = (totalVariance >= 0 ? '+' : '') + fmt(totalVariance);
+      document.getElementById('metric-flag-count').innerText = flagCount + ' Items';
+
+      // Render Table Data
+      renderTableRows(filtered);
+
+      // Render Chart
+      drawLabChart(filtered);
+
+      // Dynamic Insight Text
+      updateInsightText(catFilter, statusFilter, flagCount, totalVariance);
+    }
+
+    function renderTableRows(data) {
+      const tbody = document.getElementById('lab-table-body');
+      tbody.innerHTML = '';
+
+      if (data.length === 0) {
+        tbody.innerHTML = `<tr><td colspan="7" class="p-4 text-center text-gray-500">No matching infrastructure records found.</td></tr>`;
+        return;
+      }
+
+      data.forEach(item => {
+        const variance = item.actual - item.budget;
+        const varClass = variance > 0 ? 'text-red-400' : 'text-accent-emerald';
+        const statusBadge = item.status === 'DISCREPANCY' 
+          ? `<span class="px-2 py-0.5 rounded text-[10px] bg-red-900/30 text-red-400 border border-red-500/20">FLAGGED</span>`
+          : `<span class="px-2 py-0.5 rounded text-[10px] bg-emerald-900/30 text-accent-emerald border border-emerald-500/20">CLEAN</span>`;
+
+        const row = document.createElement('tr');
+        row.className = 'hover:bg-white/5 transition-colors';
+        row.innerHTML = `
+          <td class="p-3 text-gray-400 font-semibold">${item.id}</td>
+          <td class="p-3 text-gray-300">${item.domain}</td>
+          <td class="p-3 text-gray-200">${item.desc}</td>
+          <td class="p-3 text-right text-gray-400">Rp ${item.budget.toLocaleString('id-ID')}</td>
+          <td class="p-3 text-right text-white font-medium">Rp ${item.actual.toLocaleString('id-ID')}</td>
+          <td class="p-3 text-right ${varClass}">${variance >= 0 ? '+' : ''}${variance.toLocaleString('id-ID')}</td>
+          <td class="p-3 text-center">${statusBadge}</td>
+        `;
+        tbody.appendChild(row);
+      });
+    }
+
+    // Canvas Bar Chart Visualizer
+    function drawLabChart(data) {
+      if (!data || !Array.isArray(data)) {
+        const catFilter = document.getElementById('lab-category-filter').value;
+        const statusFilter = document.getElementById('lab-status-filter').value;
+        data = syntheticData.filter(item => {
+          return (catFilter === 'ALL' || item.domain === catFilter) && (statusFilter === 'ALL' || item.status === statusFilter);
+        });
+      }
+
+      const canvas = document.getElementById('data-lab-chart');
+      if (!canvas) return;
+
+      const ctx = canvas.getContext('2d');
+      const dpr = window.devicePixelRatio || 1;
+      
+      const rect = canvas.getBoundingClientRect();
+      canvas.width = rect.width * dpr;
+      canvas.height = rect.height * dpr;
+      ctx.scale(dpr, dpr);
+
+      const width = rect.width;
+      const height = rect.height;
+
+      ctx.clearRect(0, 0, width, height);
+
+      if (data.length === 0) {
+        ctx.fillStyle = '#6b7280';
+        ctx.font = '12px JetBrains Mono';
+        ctx.textAlign = 'center';
+        ctx.fillText('No data available for chart rendering', width / 2, height / 2);
+        return;
+      }
+
+      // Group data by domain
+      const domains = {};
+      data.forEach(item => {
+        if (!domains[item.domain]) {
+          domains[item.domain] = { budget: 0, actual: 0 };
+        }
+        domains[item.domain].budget += item.budget;
+        domains[item.domain].actual += item.actual;
+      });
+
+      const keys = Object.keys(domains);
+      const maxVal = Math.max(...keys.map(k => Math.max(domains[k].budget, domains[k].actual)), 1);
+
+      const paddingLeft = 40;
+      const paddingBottom = 30;
+      const chartWidth = width - paddingLeft - 20;
+      const chartHeight = height - paddingBottom - 20;
+
+      const groupWidth = chartWidth / keys.length;
+      const barWidth = Math.min(groupWidth * 0.35, 30);
+
+      // Draw Grid lines
+      ctx.strokeStyle = 'rgba(255, 255, 255, 0.05)';
+      ctx.lineWidth = 1;
+      for (let i = 0; i <= 4; i++) {
+        const y = 20 + (chartHeight / 4) * i;
+        ctx.beginPath();
+        ctx.moveTo(paddingLeft, y);
+        ctx.lineTo(width - 20, y);
+        ctx.stroke();
+      }
+
+      // Render Bars
+      keys.forEach((key, idx) => {
+        const groupX = paddingLeft + idx * groupWidth + groupWidth / 2;
+        
+        const bVal = domains[key].budget;
+        const aVal = domains[key].actual;
+
+        const bHeight = (bVal / maxVal) * chartHeight;
+        const aHeight = (aVal / maxVal) * chartHeight;
+
+        // Budget Bar (Blue)
+        const bX = groupX - barWidth - 2;
+        const bY = 20 + (chartHeight - bHeight);
+        ctx.fillStyle = '#3b82f6';
+        ctx.beginPath();
+        ctx.roundRect(bX, bY, barWidth, bHeight, [4, 4, 0, 0]);
+        ctx.fill();
+
+        // Actual Bar (Violet)
+        const aX = groupX + 2;
+        const aY = 20 + (chartHeight - aHeight);
+        ctx.fillStyle = aVal > bVal ? '#f43f5e' : '#10b981';
+        ctx.beginPath();
+        ctx.roundRect(aX, aY, barWidth, aHeight, [4, 4, 0, 0]);
+        ctx.fill();
+
+        // Domain Label
+        ctx.fillStyle = '#9ca3af';
+        ctx.font = '10px JetBrains Mono';
+        ctx.textAlign = 'center';
+        const labelStr = key.length > 10 ? key.substring(0, 8) + '..' : key;
+        ctx.fillText(labelStr, groupX, height - 10);
+      });
+
+      // Chart Legend
+      ctx.fillStyle = '#3b82f6';
+      ctx.fillRect(width - 150, 5, 8, 8);
+      ctx.fillStyle = '#9ca3af';
+      ctx.font = '9px JetBrains Mono';
+      ctx.textAlign = 'left';
+      ctx.fillText('Planned Budget', width - 138, 12);
+
+      ctx.fillStyle = '#10b981';
+      ctx.fillRect(width - 70, 5, 8, 8);
+      ctx.fillText('Realized', width - 58, 12);
+    }
+
+    function updateInsightText(cat, status, flags, variance) {
+      const insightEl = document.getElementById('lab-insight-text');
+      if (flags > 0) {
+        insightEl.innerText = `Audit detected ${flags} discrepancy items with a total budget deviation of Rp ${variance.toLocaleString('id-ID')}. Cost overrun identified primarily in equipment replacement pricing.`;
+      } else {
+        insightEl.innerText = `Selected category records are 100% verified and reconciled with zero budget variance detected.`;
+      }
+    }
+  </script>
+</body>
+</html>
